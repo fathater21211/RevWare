@@ -23,7 +23,7 @@ do
 		Text = Color3.fromRGB(117, 230, 125);
 		TextInactive = Color3.fromRGB(135,135,135);
 		Border = Color3.fromRGB(30,144,255);
-		Risky = Color3.fromRGB(255,0,0);
+		Risky = Color3.fromRGB(173,216,230);
 
 		FolderName = "Fishy";
 
@@ -271,7 +271,7 @@ do
 
 		Objects["liner"] = Instance.new("Frame")
 		Objects["liner"].Name = "liner"
-		Objects["liner"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Objects["liner"].BorderColor3 = Color3.fromRGB(173,216,230)
 		Objects["liner"].Size = UDim2.new(0, 1, 1, 0)
 		Objects["liner"].BorderSizePixel = 0
 		Objects["liner"].BackgroundColor3 = Color
@@ -279,7 +279,7 @@ do
 
 		Objects["text"] = Instance.new("TextLabel")
 		Objects["text"].FontFace = LibFont
-		Objects["text"].TextColor3 = Color3.fromRGB(255, 255, 255)
+		Objects["text"].TextColor3 = Color3.fromRGB(173,216,230)
 		Objects["text"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Objects["text"].Text = Text
 		Objects["text"].Name = "text"
@@ -291,7 +291,7 @@ do
 		Objects["text"].BorderSizePixel = 0
 		Objects["text"].TextSize = 12
 		Objects["text"].TextTransparency = 1
-		Objects["text"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Objects["text"].BackgroundColor3 = Color3.fromRGB(173,216,230)
 		Objects["text"].Parent = Objects["notification"]
 
 		Library:AddToRegistry(Objects["text"], {
@@ -2852,10 +2852,10 @@ do
 
 		Objects["palettedragger"] = Instance.new("Frame")
 		Objects["palettedragger"].Name = "dragger"
-		Objects["palettedragger"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Objects["palettedragger"].BorderColor3 = Color3.fromRGB(173,216,230)
 		Objects["palettedragger"].Size = UDim2.new(0, 2, 0, 2)
 		Objects["palettedragger"].BorderSizePixel = 0
-		Objects["palettedragger"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Objects["palettedragger"].BackgroundColor3 = Color3.fromRGB(173,216,230)
 		Objects["palettedragger"].Parent = Objects["palette"]
 		
 
