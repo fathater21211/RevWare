@@ -1920,7 +1920,7 @@ do
 	})
 
     exploits_section:Toggle({
-        Name = "Underground",
+        Name = "Underground (V to use)",
         Flag = "Underground",
         Default = false,
         Callback = function()
