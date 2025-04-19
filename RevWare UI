@@ -19,10 +19,10 @@ do
 	Library = {
 		Accent = Color3.fromRGB(0, 128, 0);
 		Inline = Color3.fromRGB(28, 54, 28);
-		Background = Color3.fromRGB(16, 31, 16);
+		Background = Color3.fromRGB(173,216,230);
 		Text = Color3.fromRGB(117, 230, 125);
 		TextInactive = Color3.fromRGB(135,135,135);
-		Border = Color3.fromRGB(35,35,35);
+		Border = Color3.fromRGB(30,144,255);
 		Risky = Color3.fromRGB(255,0,0);
 
 		FolderName = "Fishy";
