@@ -417,6 +417,9 @@ end, function(err)
 	local_player:Kick(err)
 end)
 
+
+
+
 local VMs = replicated_storage:FindFirstChild("VMs")
 if not VMs then
 	return local_player:Kick("no vms found!")
@@ -1915,6 +1918,66 @@ do
 			end
 		end,
 	})
+
+    exploits_section:Toggle({
+        Name = "Underground",
+        Flag = "Underground",
+        Default = false,
+        Callback = function()
+            local value = Library.Flags["Underground"]:Get()
+    
+            if value then
+             --underground antiaim for fallen leaked 
+    getgenv().underground = -1.9
+    
+    local enabled = false
+    local runserv = game:GetService("RunService")
+    local lplr = game:GetService("Players").LocalPlayer
+    local mouse = lplr:GetMouse()
+    local animation = Instance.new("Animation")
+    animation.AnimationId = "rbxassetid://13435049596"
+    local danceTrack
+    mouse.KeyDown:Connect(function(key)
+        if key == string.lower("v") then
+            pcall(function()
+                if enabled == false then
+                    enabled = true
+                    danceTrack = lplr.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(animation)
+                    danceTrack.Looped = true
+                    danceTrack:Play()
+                elseif enabled then
+                    enabled = false
+                    danceTrack:Stop()
+                    danceTrack:Destroy()
+                end
+            end)
+        end
+    end)
+    local dysenc = {}
+    local temp = 1
+    runserv.Heartbeat:Connect(function()
+        temp = temp + 1
+        if enabled and lplr.Character and lplr.Character.HumanoidRootPart then
+            dysenc[1] = lplr.Character.HumanoidRootPart.CFrame
+            dysenc[2] = lplr.Character.HumanoidRootPart.AssemblyLinearVelocity
+            local SpoofThis = lplr.Character.HumanoidRootPart.CFrame
+            SpoofThis = (SpoofThis + Vector3.new(0, getgenv().underground, 0)) * CFrame.Angles(0, 0, 0)
+            lplr.Character.HumanoidRootPart.CFrame = SpoofThis
+            runserv.RenderStepped:Wait()
+            if lplr.Character and lplr.Character.HumanoidRootPart then
+                lplr.Character.HumanoidRootPart.CFrame = dysenc[1]
+                lplr.Character.HumanoidRootPart.AssemblyLinearVelocity = dysenc[2]
+            end
+        end
+    end)
+    
+    
+            end
+        end,
+    })
+
+
+
 
 	workspace.DescendantAdded:Connect(function(descendant)
 		local value = Library.Flags["no trap touch parts"]:Get()
@@ -4509,6 +4572,8 @@ run_service.RenderStepped:Connect(function()
 			end
 		end
 
+       
+
 		if quick_stack_funcs and #quick_stack_funcs > 0 then
 			for _, func in quick_stack_funcs do
 				local instant_loot = Library.Flags["instant loot"]:Get()
@@ -4543,3 +4608,4 @@ end)
 
 Library:Notify(string.format("[🕰️🏎️📈RevWare ] loaded in %.1f", tick() - start_tick), 10, Library.Accent)
 
+Library:Notify(string.format("[🕰️🏎️📈RevWare ] NEW UPDATE IN EXPLOITS, UNDERGROUND", tick() - start_tick), 10, Library.Accent)
