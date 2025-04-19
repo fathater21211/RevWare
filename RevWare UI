@@ -17,15 +17,15 @@ do
 	end
 
 	Library = {
-		Accent = Color3.fromRGB(216,145,239);
-		Inline = Color3.fromRGB(216,145,239);
-		Background = Color3.fromRGB(143,0,255);
-		Text = Color3.fromRGB(255,255,255);
-		TextInactive = Color3.fromRGB(216,145,239);
-		Border = Color3.fromRGB(216,145,239);
-		Risky = Color3.fromRGB(216,145,239);
+		Accent = Color3.fromRGB(0, 128, 0);
+		Inline = Color3.fromRGB(28, 54, 28);
+		Background = Color3.fromRGB(16, 31, 16);
+		Text = Color3.fromRGB(117, 230, 125);
+		TextInactive = Color3.fromRGB(135,135,135);
+		Border = Color3.fromRGB(35,35,35);
+		Risky = Color3.fromRGB(255,0,0);
 
-		FolderName = "RevWare";
+		FolderName = "Fishy";
 
 		Key = Enum.KeyCode.RightShift;
 		Open = true;
@@ -3663,14 +3663,14 @@ do
 			OptionInsts["option"] = Instance.new("TextButton")
 			OptionInsts["option"].FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 			OptionInsts["option"].TextColor3 = Color3.fromRGB(0, 0, 0)
-			OptionInsts["option"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+			OptionInsts["option"].BorderColor3 = Color3.fromRGB(173,216,230)
 			OptionInsts["option"].Text = ""
 			OptionInsts["option"].BackgroundTransparency = 1
 			OptionInsts["option"].Name = "option"
 			OptionInsts["option"].Size = UDim2.new(1, 0, 0, 15)
 			OptionInsts["option"].BorderSizePixel = 0
 			OptionInsts["option"].TextSize = 14
-			OptionInsts["option"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			OptionInsts["option"].BackgroundColor3 = Color3.fromRGB(173,216,230)
 			OptionInsts["option"].Parent = Objects["realbox"]
 
 			OptionInsts["text"] = Instance.new("TextLabel")
@@ -3685,7 +3685,7 @@ do
 			OptionInsts["text"].Position = UDim2.new(0, 5, 0, -1)
 			OptionInsts["text"].BorderSizePixel = 0
 			OptionInsts["text"].TextSize = 12
-			OptionInsts["text"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			OptionInsts["text"].BackgroundColor3 = Color3.fromRGB(173,216,230)
 			OptionInsts["text"].Parent = OptionInsts["option"]
 
 			Library:AddToRegistry(OptionInsts["text"], {
